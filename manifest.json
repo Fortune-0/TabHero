@@ -1,0 +1,7 @@
+{
+    "manifest_version": 3,
+    "name": "Tabsavvy",
+    "version": "1.0",
+    "description": "A simple extension that manage open tabs.",
+    "permissions": ["tabs", "activeTab"]
+}
