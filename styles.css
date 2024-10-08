@@ -1,0 +1,28 @@
+body {
+    width: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10%;
+}
+
+#tabList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#tabList li {
+    padding: 5%;
+    cursor: pointer;
+}
+
+#tabList li:hover {
+    background-color: #9ac6f3;
+}
