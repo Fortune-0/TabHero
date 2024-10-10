@@ -1,28 +1,76 @@
 body {
     width: 300px;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #9ac6f3;
 }
 
 h1 {
     text-align: center;
+    color: #333;
+    font-size: 20px;
 }
 
 #searchInput {
-    width: 100%;
-    padding: 5px;
+    width: 85%;
+    padding: 8px;
     margin-bottom: 10%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box
+}
+
+#clearSearch {
+    width: 10%;
+    background-color: #ff4c4c;
+    border: none;
+    border-radius: 10px;
+    color: aliceblue;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    padding: 8px;
 }
 
 #tabList {
     list-style-type: none;
     padding: 0;
+    overflow-y: auto;
+    max-height: 500px;
 }
 
 #tabList li {
     padding: 5%;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+    margin-bottom: 0px;  /* */
+    overflow: auto;
+    text-overflow: ellipsis;
+    /*white-space: nowrap;*/
 }
 
+#tabList li span {
+    flex: 1;
+    margin-right: 10px;
+}
 #tabList li:hover {
-    background-color: #9ac6f3;
+    background-color: #a0c1e1;
+}
+
+#tabList li button {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#tabList li button:hover {
+    background-color: #993333;
 }

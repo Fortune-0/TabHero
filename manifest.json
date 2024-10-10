@@ -3,5 +3,14 @@
     "name": "Tabsavvy",
     "version": "1.0",
     "description": "A simple extension that manage open tabs.",
-    "permissions": ["tabs", "activeTab"]
+    "permissions": ["tabs", "storage", "alarms"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "icon":{
+        
+    }
 }
