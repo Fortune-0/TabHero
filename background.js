@@ -26,7 +26,7 @@ chrome.alarms.onAlarm.addListener((alarm) => {
         const now = new Date().getTime();
         for (let tabId in tabLastActive) {
             // Close tabs that have been inactive for over 30 minutes
-            if (now - tabLastActive[tabId] > 1000 * 60 * 30) {
+            if (now - tabLastActive[tabId] > 1000 * 60 * 7) {
                 chrome.tabs.remove(parseInt(tabId));
             }
         }

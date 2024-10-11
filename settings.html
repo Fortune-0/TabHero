@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TabSavvy Settings</title>
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+    <div class="container">
+        <h1>TabSavvy Settings</h1>
+        <form id="settingsForm">
+            <div class="setting">
+                <label for="inactiveTimeout">Mark tabs as inactive after (minutes):</label>
+                <input type="range" id="inactiveTimeout" min="5" max="60" step="5">
+                <span id="inactiveTimeoutValue"></span>
+            </div>
+            <div class="setting">
+                <label for="sleepTimeout">Put inactive tabs to sleep after (minutes):</label>
+                <input type="range" id="sleepTimeout" min="10" max="120" step="10">
+                <span id="sleepTimeoutValue"></span>
+            </div>
+            <div class="setting">
+                <label for="closeTimeout">Close inactive tabs after (minutes):</label>
+                <input type="range" id="closeTimeout" min="30" max="240" step="30">
+                <span id="closeTimeoutValue"></span>
+            </div>
+            <div class="setting">
+                <label for="groupSimilarTabs">
+                    <input type="checkbox" id="groupSimilarTabs">
+                    Automatically group similar tabs
+                </label>
+            </div>
+            <div class="setting">
+                <label for="closeDuplicateTabs">
+                    <input type="checkbox" id="closeDuplicateTabs">
+                    Automatically close duplicate tabs
+                </label>
+            </div>
+            <div class="buttons">
+                <button type="button" id="resetButton">Reset to Defaults</button>
+                <button type="submit">Save Settings</button>
+            </div>
+        </form>
+    </div>
+    <script src="settings.js"></script>
+</body>
+</html>

@@ -62,3 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Clear search functionality
     clearSearch.addEventListener('click', clearSearchInput);
 });
+
+// Open options page
+chrome.runtime.openOptionsPage();
