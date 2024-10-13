@@ -64,4 +64,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Open options page
-chrome.runtime.openOptionsPage();
+// chrome.runtime.openOptionsPage();
+
+// Open the settings page
+document.getElementById('settingsButton').addEventListener('click', function() {
+    chrome.runtime.openOptionsPage();
+});

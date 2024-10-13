@@ -10,8 +10,9 @@ body {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 12px;
     background-color: #f0aaaa;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -30,7 +31,24 @@ label {
 }
 
 input[type="range"] {
+    -webkit-appearance: none;
     width: 100%;
+    background-color: #ddd;
+    height: 5px;
+    border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #007bff;
+    cursor: pointer;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+    background-color: #1d0076;
 }
 
 .buttons {
@@ -43,14 +61,33 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+label {
+    margin-right: 10px;
 }
 
 button[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #28a745;
     color: white;
 }
 
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
 button[type="button"] {
-    background-color: #f44336;
+    background-color: #ff4d4d;
     color: white;
+}
+
+button[type="button"]:hover {
+    background-color: #ff1a1a;
 }

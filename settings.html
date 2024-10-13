@@ -11,18 +11,18 @@
         <h1>TabSavvy Settings</h1>
         <form id="settingsForm">
             <div class="setting">
-                <label for="inactiveTimeout">Mark tabs as inactive after (minutes):</label>
+                <label for="inactiveTimeout" title="How long before a tab is marked inactive">Mark tabs as inactive after (minutes):</label>
                 <input type="range" id="inactiveTimeout" min="5" max="60" step="5">
                 <span id="inactiveTimeoutValue"></span>
             </div>
             <div class="setting">
                 <label for="sleepTimeout">Put inactive tabs to sleep after (minutes):</label>
-                <input type="range" id="sleepTimeout" min="10" max="120" step="10">
+                <input type="range" id="sleepTimeout" min="3" max="120" step="2">
                 <span id="sleepTimeoutValue"></span>
             </div>
             <div class="setting">
                 <label for="closeTimeout">Close inactive tabs after (minutes):</label>
-                <input type="range" id="closeTimeout" min="30" max="240" step="30">
+                <input type="range" id="closeTimeout" min="15" max="240" step="10">
                 <span id="closeTimeoutValue"></span>
             </div>
             <div class="setting">
@@ -36,6 +36,10 @@
                     <input type="checkbox" id="closeDuplicateTabs">
                     Automatically close duplicate tabs
                 </label>
+            </div>
+            <div class="setting">
+                <label for="notifyTabClose">Notify when a tab is about to close</label>
+                <input type="checkbox" id="notifyTabClose">
             </div>
             <div class="buttons">
                 <button type="button" id="resetButton">Reset to Defaults</button>
