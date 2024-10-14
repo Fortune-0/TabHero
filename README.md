@@ -38,9 +38,9 @@ You can reset all settings to their default values by clicking the **Reset to De
 ## Roadmap
 
 - **Add Popup Shortcut:** Implement a keyboard shortcut to quickly open the extension popup.
--**Tab Search:** Add a quick tab search feature to find tabs faster.
--**Tab Backup:** Automatically save and restore tabs for future sessions.
--**Analytics:** Show statistics on tab usage and recommend actions to the user.
+- **Tab Search:** Add a quick tab search feature to find tabs faster.
+- **Tab Backup:** Automatically save and restore tabs for future sessions.
+- **Analytics:** Show statistics on tab usage and recommend actions to the user.
 
 ## Contributing
 
