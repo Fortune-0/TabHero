@@ -56,16 +56,18 @@ function closeDuplicateTabs() {
   });
 }
 // Notify the user when tab is about to close
-function showTabCloseNotification(tabId) {
-  chrome.notifications.create({
-      type: 'basic',
-      iconUrl: 'icon.png', // Your extension's icon
-      title: 'Tab Closing',
-      message: 'A tab is about to close.',
-      buttons: [{ title: 'Undo' }]
-  }, function(notificationId) {
-      console.log('Notification shown for tab close', tabId);
-  });
+function showTabCloseNotification(tab) {
+  chrome.storage.sync.get(['tabSavvySettings'], function(result) {
+    const settings = result.tabSavvySettings || {};
+    if (settings.notifyTabClose && tab) {
+        chrome.notifications.create({
+            type: 'basic',
+            iconUrl: 'icon.png', // Path to your icon
+            title: 'Tab Closed',
+            message: 'Go to Settings to disable this notification'
+        });
+    }
+});
 }
 
 // Detect tab close and show notification if enabled
